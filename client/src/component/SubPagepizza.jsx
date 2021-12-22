@@ -2,9 +2,7 @@ import React from "react";
 import Pizzaitems from "./Pizzaitems";
 import { useSelector } from "react-redux";
 const SubPagepizza = () => {
-    const items = useSelector((state)=> state.foodReducer2.basket2)
-
-
+  const items = useSelector((state) => state.foodReducer2.basket2);
 
   return (
     <div className="container">
@@ -16,9 +14,9 @@ const SubPagepizza = () => {
         {items.subItems.map((elem, index) => {
           return (
             <Pizzaitems
-            elem={elem}
-             key={index}
-             indx={index}
+              elem={elem}
+              key={index}
+              indx={index}
               name={elem.name}
               price={elem.price}
               desc={elem.description}
