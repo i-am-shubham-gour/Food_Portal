@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
+
 const connectDB = async () => {
   try {
-    const URI =
-      "mongodb+srv://Shub2354:Shub%402354@myprojects.c6kv9.mongodb.net/Food_websiteSample?retryWrites=true&w=majority";
+    const URI = process.env.MONGO_URI
     await mongoose.connect(URI);
     console.log("Database connect successfully");
   } catch (error) {
