@@ -5,13 +5,14 @@ import Productitem from "./Productitem";
 import { render, render2 } from "./../Action/action";
 import { useDispatch } from "react-redux";
 
+
 const Productpage = () => {
   const dispatch = useDispatch();
   const [pizza, setPizza] = useState([]);
   const [burger, setBurger] = useState([]);
 
   const get_data = async () => {
-    const response = await axios.get("http://localhost:4321/Food/getAll");
+    const response = await axios.get(process.env.REACT_APP_BASE_URL);
 
     setPizza(response.data[1]);
     setBurger(response.data[0]);
