@@ -1,8 +1,8 @@
 const express = require("express");
 const connectDB = require("./config/DBconfig");
+const path = require('path')
 const FoodRoute = require("./routes/food.routes");
 const app = express();
-const PORT = process.env.PORT || 4321;
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 require('dotenv').config({path:'./env.config'})
@@ -24,9 +24,10 @@ app.get("/", (req, res) => {
   res.send("API working");
 });
 
-app.listen(PORT, (error) => {
+app.listen(port, (error) => {
   if (error) {
     console.log(error.message);
   }
   console.log("Server running");
+ 
 });
