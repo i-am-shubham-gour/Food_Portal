@@ -23,8 +23,8 @@ const Productpage = () => {
   };
 
   useEffect(() => {
-    get_data();
-  }, []);
+    get_data()
+  },[]);
 
   return (
     <div className="container d-flex  justify-content-center">

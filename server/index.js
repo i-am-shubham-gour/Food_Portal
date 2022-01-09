@@ -4,7 +4,7 @@ const FoodRoute = require("./routes/food.routes");
 const app = express();
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
-require('dotenv').config({path: './env.config'})
+require('dotenv').config({path: './config.env'})
 const PORT = process.env.PORT || 4321;
 connectDB();
 app.use(express.json());
