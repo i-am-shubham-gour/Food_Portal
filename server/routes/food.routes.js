@@ -3,9 +3,9 @@ const mainpage = require("../model/food");
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
-  cloud_name: "project2354",
-  api_key: "788538959648522",
-  api_secret: "CuAd_j_HY-wgV10_Y76_XSFD-e0",
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 router.post("/addmainPage", (req, res) => {

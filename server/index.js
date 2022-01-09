@@ -5,6 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 4321;
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
+require('dotenv').config({path:'./env.config'})
+
 
 connectDB();
 app.use(express.json());

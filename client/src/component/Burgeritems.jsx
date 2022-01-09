@@ -19,7 +19,7 @@ const Burgeritems = ({ name, image, price, desc, indx, elem }) => {
               Order Now
             </button>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 ">
             <img
               className="rounded"
               src={image}

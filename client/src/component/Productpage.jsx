@@ -15,6 +15,7 @@ const Productpage = () => {
 
     setPizza(response.data[1]);
     setBurger(response.data[0]);
+    console.log(response.data);
 
     dispatch(render(response.data[0].subItemsData));
     dispatch(render2(response.data[1].subItemsData));
